@@ -1,0 +1,51 @@
+.container {
+  width: 600px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tanah {
+  cursor: crosshair;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) center no-repeat;
+  background-position-y: 23px;
+  background-size: 60%;
+  position: absolute;
+  bottom: 0;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(../img/tikus.png) no-repeat bottom center;
+  background-size: 50%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: -30px;
+}
+.mulai {
+  background-color: red;
+  color: black;
+  border-radius: 15px;
+  width: 170px;
+  box-shadow: 3px 3px 7px;
+  height: 30px;
+  cursor: grab;
+}
